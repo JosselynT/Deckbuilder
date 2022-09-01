@@ -11,3 +11,6 @@ class Card():
 
     def setTotal(self, nb: int):
         self.total = nb
+
+    def name(self):
+        return self.name

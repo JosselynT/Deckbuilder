@@ -14,3 +14,4 @@ class LeaderCard(Card):
         self.characterBack = characterBack
         self.specialTraitBack = specialTraitBack
         self.eraBack = eraBack
+        self.total = 1
