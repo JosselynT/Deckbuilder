@@ -7,9 +7,16 @@ class Deck():
         self.maxSize = maxSize
 
     def addCard(card: Card):
-        self.list[card.name()] += 1 if self.list[card.name()] else self.list[card.name()] = 1
+        if self.list[card.number()]:
+            if self.list[card.number()]+1 < card.total():
+                self.list[card.number()] += 1
+        else:
+            self.list[card.number()] = 1
 
     def removeCard(card: Card):
-        self.list[card.name()] -=1
-        if self.list[card.name()] == 0:
-            self.list.pop(card.name())
+        self.list[card.number()] -=1
+        if self.list[card.number()] == 0:
+            self.list.pop(card.number())
+
+    def selectCard(card: Card):
+        return self.list[card.number()]

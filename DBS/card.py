@@ -14,3 +14,15 @@ class Card():
 
     def name(self):
         return self.name
+
+    def number(self):
+        return self.number
+
+    def total(self):
+        return self.total
+
+    def banned(self):
+        self.total = 0
+
+    def limited(self):
+        self.total = 1
